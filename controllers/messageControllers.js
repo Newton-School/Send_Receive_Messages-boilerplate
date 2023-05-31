@@ -44,7 +44,7 @@ const newmessages = async (req, res) => {
     /*
 //
 */
-    res.status(201).json({ message: 'Message sent successfully' });
+    //If successful than the status code will be 201 with message 'Message sent successfully'
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to send message' });
