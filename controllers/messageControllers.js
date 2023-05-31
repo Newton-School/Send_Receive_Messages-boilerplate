@@ -33,13 +33,17 @@ const newmessages = async (req, res) => {
     await newMessage.save();
 
     // Update sender's sentMessages array
-    sender.sentMessages.push(newMessage._id);
-    await sender.save();
-
+    //Write a code here to push(store) newMessage_id into sentMessage of User (refer to User.js Model)
+    //After pushing newMessage_id into User, save it to a database using save() e.g: await sender.save
+    /*
+//
+*/
     // Update receiver's receivedMessages array
-    receiver.receivedMessages.push(newMessage._id);
-    await receiver.save();
-
+    //Write a code here to push(store) newMessage_id into receivedMessage of User (refer to User.js Model)
+    //After pushing newMessage_id into User, save it to a database using save() e.g: await receiver.save
+    /*
+//
+*/
     res.status(201).json({ message: 'Message sent successfully' });
   } catch (err) {
     console.error(err);
